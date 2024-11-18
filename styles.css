@@ -1,0 +1,263 @@
+:root {
+    --primario: #fa3838;
+    --secundario: #333435;
+    --negro: #000000;
+    --blanco: white;
+}
+
+
+html {
+    font-size: 10px;
+    background-color: var(--negro);
+    overflow-x: hidden;
+
+}
+
+body {
+    margin: 0 auto;
+}
+
+.cabezera {
+    background-color: var(--negro);
+}
+
+.contenedor-global {
+    background-color: var(--negro);
+}
+
+h1 {
+    font-size: 4rem;
+    /* 10 * 4 = 40px */
+}
+
+/* Cabezera */
+
+.cabezera {
+    width: 98%;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+
+}
+
+.cabezera-navegacion {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-content: end;
+    font-size: "Lato";
+}
+
+.cabezera-logo {
+    border-radius: 100%;
+    border: var(--primario) solid;
+    height: 8rem;
+}
+
+.cabezera-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cabezera-navegacion a:hover {
+    color: var(--primario);
+}
+
+
+
+/* Seccion */
+.Seccion1 {
+    width: 100%;
+    height: 89.84rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.Seccion1-general {
+    margin-top: 10rem;
+
+}
+
+.Seccion1-contenedor {
+    width: 75%;
+    color: var(--blanco);
+    display: grid;
+    grid-template-columns: 10% 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 16rem;
+    font-family: "Lato";
+    padding: 5rem;
+    margin: 0 auto;
+    background-color: #333435;
+    border-radius: 5rem;
+    border: solid white 0.5px;
+    padding: 7rem;
+}
+
+.Seccion1-contenedor_img {
+    background: url(img/foto.jpg);
+    background-size: cover;
+    height: 60rem;
+    border-radius: 100%;
+    height: 128%;
+    width: 200%;
+}
+
+.Seccion1-info {
+    text-align: center;
+}
+
+
+.Seccion1-contenedor_n {
+    font-size: 8rem;
+    margin: 3rem;
+}
+
+.Seccion1-contenedor_web {
+    font-size: 4rem;
+}
+
+
+.Seccion1 .ondas {
+    width: 200%;
+    position: relative;
+}
+
+.Seccion1 .ondas #visual1 {
+    position: absolute;
+    top: -492px;
+    animation: animacionOla 10s infinite;
+}
+
+.Seccion1 .ondas #visual2 {
+    position: absolute;
+    top: -538px;
+    animation: animacionOla 15s infinite;
+}
+
+
+@keyframes animacionOla {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Seccion 2 */
+.Seccion2 {
+    background: linear-gradient(to bottom, rgba(211, 1, 46, 1.0), rgba(193, 7, 47, 1.0));
+    margin: 0 auto;
+    padding: 10rem;
+}
+
+.Seccion2-Titulo {
+    font-family: "Lato";
+    font-size: 30px;
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    width: 20%;
+    border-bottom: solid black 5px;
+
+}
+
+.Seccion2-Titulo-h2 h2 {
+    margin: 4px;
+}
+
+
+.Seccion2-SobreMi {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 4rem;
+}
+
+.Seccion2-SobreMi1 {
+    background-color: var(--secundario);
+    border: solid black 3px;
+    width: 98%;
+    border-radius: 2rem;
+    margin: 4rem 0;
+}
+
+.Seccion2-SobreMi1 p {
+    padding: 3rem;
+    font-size: 26px;
+    font-style: "Lato";
+    color: white;
+    margin: 0;
+}
+
+.Seccion2-SobreMi ul li {
+    font-size: 26px;
+    font-style: "Lato";
+    color: white;
+}
+
+.Seccion2-SobreMi_botones {
+    display: flex;
+    gap: 1rem;
+    height: 17px;
+    margin: none;
+    background-color: var(--negro);
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+
+.Seccion2-SobreMi_botones .rojo {
+    background-color: var(--primario);
+    width: 2rem;
+}
+
+.Seccion2-SobreMi_botones .amarillo {
+    background-color: yellow;
+    width: 2rem;
+}
+
+.Seccion2-SobreMi_botones .verde {
+    background-color: greenyellow;
+    width: 2rem;
+}
+
+.Seccion2-SobreMi_botones div {
+    border-radius: 100%;
+}
+
+.Seccion2-SobreMi_botones h2 {
+    font-family: "Lato";
+    font-size: 18px;
+    color: white;
+    align-self: center;
+}
+
+.grid-span {
+    grid-row: 1 /3;
+    grid-column: 2 / 3;
+    width: 94%;
+}
+
+.grid-span .Seccion2-SobreMi1 {
+    height: 86.7%;
+}
+
+/* Seccion3 */
+
+.Seccion3 {
+    background-color: #c1072f;
+    margin: 0 auto;
+    padding: 10rem;
+}
