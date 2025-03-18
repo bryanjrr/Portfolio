@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Escola Salvador Espriu - Prácticas (5meses)",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "image": "./img/salvadorEspriu.jpg",
+        "tipo": "studiesImage"
+    },
+    {
+        "title": "Strategying - Prácticas (Actualmente)",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "image": "./img/images.png",
+        "tipo": "studiesImage2"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "title": "ESO: Educacion Secundaria Obligatoria | 2017 - 2021",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "image": "./img/pompeu-fabra.jpg",
+        "tipo": "studiesImage"
+    },
+    {
+        "title": "Grado Medio: Sistemas Microinformaticos y Redes | 2021 - 2023",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "image": "./img/stucom.jpg",
+        "tipo": "studiesImage2"
+    },
+    {
+        "title": "Grado Superior: Desarrollo de Aplicaciones Web | 2023 - 2025",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur eveniet fugaeos ullam, quibusdam sequi Quasi id rem reprehenderit vitae incidunt, consequatur hic temporibus. Unde quidevelit iusto officiis.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "image": "./img/stucom.jpg",
+        "tipo": "studiesImage2"
+    }
+]
