@@ -326,34 +326,53 @@ h1 {
 /* Mis Proyectos */
 .transformed {
     transition: transform masInfo 1s ease-out;
-    animation: masInfo 3s;
+    animation: masInfo 2s;
     width: 100%;
     height: 100%;
 }
 
-.textoTransformed{
+.textoTransformed {
     animation: textOpacity 1s;
 }
 
 .bigContent {
-   grid-column: 2/2;    
+    animation: bigContent 1.5s;
+    grid-column: 1/3;
 }
 
-@keyframes textOpacity{
-    from {opacity: 0;}
-    to {opacity: 1;}
+@keyframes bigContent {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+
+    }
+
+}
+
+@keyframes textOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes masInfo {
-    0%{
+    0% {
         width: 65%;
         height: 65%;
     }
-    100%{
+
+    50%{
+        
+    }
+
+    100% {
         height: 100%;
         width: 100%;
     }
 }
-
-
-

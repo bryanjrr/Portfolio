@@ -199,22 +199,20 @@ let moreInfo = document.getElementById("mInfo1");
 
 document.getElementById("mInfo1").addEventListener("click", function (e) {
   e.preventDefault();
-
   let card = document.getElementById("card");
   let principalContent = document.getElementById("principalContent");
-
   let returnButton = document.getElementById("returnButton");
   let back = document.getElementById("back");
   card.classList.add("transformed");
-
+  let allContent = document.getElementById("allContent");
 
   setTimeout(function () {
+    allContent.classList.add("bigContent");
     content.classList.toggle("textoTransformed");
     content.style.display = "block";
     returnButton.classList.add("textoTransformed");
     returnButton.style.display = "block";
     principalContent.style.display = "none";
-    card.classList.add("bigContent");
   }, 1000)
 
 
@@ -225,7 +223,11 @@ document.getElementById("mInfo1").addEventListener("click", function (e) {
     content.style.display = "none";
     returnButton.style.display = "none";
     allContent.classList.remove("bigContent");
-
   });
 
 })
+
+
+
+
+

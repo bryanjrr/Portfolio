@@ -168,9 +168,9 @@
 
     <div>
       <div class="grid grid-cols-2 p-10">
-        <div class="relative p-10 top-0 h-290">
+        <div id="allContent" class="relative p-10 top-0 h-290">
           <img src="./img/Proyectos/GestionPersonas/personasuf6.png" class="shadow rounded-2xl w-full h-[75%]"
-            alt="Compotech">
+            alt="personas">
           <div id="card"
             class="bg-black absolute h-1/2 right-0 w-[65%] bottom-0 text-white rounded-2xl shadow-2xl shadow-black z-10">
             <div class="p-5 text-2xl font-[Lato]">
@@ -181,43 +181,82 @@
               <div id="contentCard">
                 <div>
                   <div id="content" class="hidden">
-                    <div class="max-w-5xll mx-auto p-2 bg-white rounded-lg shadow-md">
-                      <div class=" grid grid-cols-2 justify-between mt-4 space-y-3 text-gray-700 text-2xl  h-[60%]">
-                        <li>
-                          <span class="font-semibold text-indigo-600">Alta de nuevas personas:</span>
-                          Los usuarios pueden registrar información personal detallada de nuevas personas, como su
-                          nombre, dirección, edad, entre otros datos relevantes.
-                        </li>
-                        <li>
-                          <span class="font-semibold text-indigo-600">Registro de vehículos asociados:</span>
-                          Es posible añadir vehículos y vincularlos a las personas registradas en el sistema. Cada
-                          vehículo incluye información como la marca, modelo, matrícula, y otros datos importantes.
-                        </li>
-                        <li>
-                          <span class="font-semibold text-indigo-600">Actualización de datos:</span>
-                          El sistema permite modificar la información existente de personas registradas. Esto incluye la
-                          actualización de datos personales o la adición/eliminación de vehículos asociados.
-                        </li>
-                        <li>
-                          <span class="font-semibold text-indigo-600">Eliminación de personas:</span>
-                          Los usuarios tienen la opción de dar de baja a personas del sistema, lo que elimina también la
-                          relación con cualquier vehículo que estuviera registrado.
-                        </li>
+                    <div class="max-w-5xll mx-auto p-10 bg-violet-200 rounded-lg shadow-md ">
+
+                      <p class="text-gray-700 ">El Programa se encarga de poder gestionar diversas
+                        funcionalidades de
+                        gestion sobre empleados y clientes. Este programa seria ideal para una
+                        empresa que quiera tener un control
+                        sobre los clientes y empleados que hay actualmente.
+                      </p>
+
+
+                      <div
+                        class=" grid grid-cols-2 justify-between text-justify gap-3 mt-4 space-y-3 text-gray-700 text-2xl h-[60%]">
+                        <article>
+                          <div class="text-center">
+                            <div class="shadow w-[80%] relative rounded-2xl m-auto">
+                         
+                            <!--   <img id="imgSlider" src=""
+                                alt="altaPersona"> -->
+                              <video src="./img/Proyectos/GestionPersonas/programaVideo.mp4" controls autoplay></video>
+                            </div>
+                          </div>
+                        </article>
+
+                        <article>
+                          <div class="py-3">
+                            <span class="font-semibold text-indigo-600 ">Alta de nuevas
+                              personas:</span>
+                            Cuando damos de alta una nueva persona, tenemos la opción de dar de
+                            alta
+                            a un empleado o a un cliente. Una vez seleccionado el tipo persona,
+                            tenemos una interfaz donde tenemos la posibilidad de introducir
+                            todos
+                            los datos
+                            correspondientes de la persona.
+                             Tambien Es posible añadir vehículos y vincularlos a las
+                            personas registradas
+                            en
+                            el sistema. Cada
+                            vehículo incluye información como la marca, modelo, matrícula, y
+                            otros
+                            datos importantes.
+                          </div>
+
+                          <div class="py-3">
+                            <span class="font-semibold text-indigo-600 ">Buscar</span>
+                            En caso de que queramos ver un listado de personas con un nombre en especifico, esta
+                            funcionalidad lo hace y te da como resultado un listado de todos usuarios junto a
+                            informacion adicional
+                          </div>
+
+                          <div class="py-3">
+                            <span class="font-semibold text-indigo-600 ">Mostrar uno</span>
+                            En 3r lugar tambien hay una funcionalidad donde puedes buscar por a un cliente o empleado
+                            mediante su DNI y como resultado te mostrara los datos de la persona
+                          </div>
+                          <div>
+                            <span class="font-semibold text-indigo-600">Actualización de
+                              datos:</span>
+                            El sistema permite modificar la información existente de personas
+                            registradas. Esto incluye la
+                            actualización de datos personales o la adición/eliminación de vehículos
+                            asociados.
+                          </div>
+
+                          <div class="py-10">
+                            <span class="font-semibold text-indigo-600">Eliminación de
+                              personas:</span>
+                            Los usuarios tienen la opción de dar de baja a personas del sistema, lo
+                            que elimina también la
+                            relación con cualquier vehículo que estuviera registrado.
+                          </div>
+                          <div>
+                        </article>
                       </div>
 
-                      <p class="mt-6 text-gray-700 text-2xl leading-relaxed">
-                        Todas estas operaciones están respaldadas por una <span class="font-medium text-indigo-600">base
-                          de datos MySQL</span>, que almacena de forma eficiente y estructurada la información de las
-                        personas y los vehículos.
-                      </p>
 
-                      <p class="mt-4 text-gray-700 text-2xl leading-relaxed">
-                        El diseño de la aplicación incluyó un enfoque <span class="font-medium text-indigo-600">modular
-                          y escalable</span>, lo que facilita la implementación de nuevas funcionalidades en el futuro.
-                        La interfaz de usuario, aunque sencilla, fue diseñada para ser <span
-                          class="font-medium text-indigo-600">intuitiva y accesible</span>, permitiendo que los usuarios
-                        interactúen fácilmente con las diferentes características del programa.
-                      </p>
                     </div>
                   </div>
 
@@ -257,7 +296,8 @@
                 <div class="flex justify-around" id="footer">
                   <a class="text-blue-600 py cursor-pointer" id="mInfo1">Mas Información <i
                       class="fa-solid fa-circle-info"></i></a>
-                  <a target="_blank" class="text-blue-600 py"  href="https://github.com/bryanjrr/Gestion-Personas-Java.git">Link
+                  <a target="_blank" class="text-blue-600 py"
+                    href="https://github.com/bryanjrr/Gestion-Personas-Java.git">Link
                     Repositorio <i class="fa-brands fa-github"></i></a>
                   <div id="returnButton" style="display: none;">
                     <a id="back" class="text-blue-600 py cursor-pointer">Volver
@@ -330,7 +370,7 @@
         </div>
 
         <div class="relative p-10 top-0  h-290">
-          <img src="./img/Proyectos/BlogBryan/blogbryan.png" class="shadow rounded-2xl w-full h-[75%]" alt="Compotech">
+          <img src="./img/Proyectos/BlogBryan/blogbryan.png" class="shadow rounded-2xl w-full h-[75%]" alt="blogBryan">
           <div
             class="bg-black absolute h-1/2 right-0 w-[65%] bottom-0 text-white rounded-2xl shadow-2xl shadow-black z-10">
             <div class="p-5 text-2xl font-[Lato]">
