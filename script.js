@@ -194,39 +194,90 @@ async function cargarExperiencia() {
   return respuesta.json();
 }
 
-let moreInfo = document.getElementById("mInfo1");
 
+const tarjetas = [
+  {
+    triggerId: "mInfo1",
+    cardId: "card",
+    principalContentId: "principalContent",
+    returnButtonId: "returnButton",
+    backId: "back",
+    allContentId: "allContent",
+    bigContentClass: "bigContent",
+    secondaryContent: "content",
+    row: "1"
+  },
+  {
+    triggerId: "miInfo2",
+    cardId: "card2",
+    principalContentId: "principalContent2",
+    returnButtonId: "returnButton2",
+    backId: "back2",
+    allContentId: "allContent2",
+    bigContentClass: "bigContent",
+    secondaryContent: "content2",
+    row: "2"
 
-document.getElementById("mInfo1").addEventListener("click", function (e) {
-  e.preventDefault();
-  let card = document.getElementById("card");
-  let principalContent = document.getElementById("principalContent");
-  let returnButton = document.getElementById("returnButton");
-  let back = document.getElementById("back");
-  card.classList.add("transformed");
-  let allContent = document.getElementById("allContent");
+  },
+  {
+    triggerId: "miInfo3",
+    cardId: "card3",
+    principalContentId: "principalContent3",
+    returnButtonId: "returnButton3",
+    backId: "back3",
+    allContentId: "allContent3",
+    bigContentClass: "bigContent",
+    secondaryContent: "content3",
+    row: "3"
+  },
+  {
+    triggerId: "miInfo4",
+    cardId: "card4",
+    principalContentId: "principalContent4",
+    returnButtonId: "returnButton4",
+    backId: "back4",
+    allContentId: "allContent4",
+    bigContentClass: "bigContent",
+    secondaryContent: "content4",
+    row: "4"
+  },
 
-  setTimeout(function () {
-    allContent.classList.add("bigContent");
-    content.classList.toggle("textoTransformed");
-    content.style.display = "block";
-    returnButton.classList.add("textoTransformed");
-    returnButton.style.display = "block";
-    principalContent.style.display = "none";
-  }, 1000)
+];
 
+tarjetas.forEach(tarjeta => {
+  console.log(tarjeta)
+  const trigger = document.getElementById(tarjeta.triggerId);
+  const card = document.getElementById(tarjeta.cardId);
+  const principalContent = document.getElementById(tarjeta.principalContentId);
+  const returnButton = document.getElementById(tarjeta.returnButtonId);
+  const back = document.getElementById(tarjeta.backId);
+  const allContent = document.getElementById(tarjeta.allContentId);
+  const content = document.getElementById(tarjeta.secondaryContent)
+
+  trigger.addEventListener("click", function (e) {
+    e.preventDefault();
+    card.classList.add("transformed");
+    setTimeout(function () {
+      allContent.style.gridRow = tarjeta.row;
+      allContent.classList.add(tarjeta.bigContentClass);
+      content.classList.toggle("textoTransformed");
+      content.style.display = "block";
+      returnButton.classList.add("textoTransformed");
+      returnButton.style.display = "block";
+      principalContent.style.display = "none";
+
+    }, 1000);
+  });
 
   back.addEventListener("click", function (e) {
-    e.preventDefault()
+    e.preventDefault();
     card.classList.remove("transformed");
     principalContent.style.display = "block";
     content.style.display = "none";
     returnButton.style.display = "none";
-    allContent.classList.remove("bigContent");
+    allContent.classList.remove(tarjeta.bigContentClass);
   });
-
-})
-
+});
 
 
 
