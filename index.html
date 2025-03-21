@@ -118,7 +118,7 @@
       </div>
 
       <div class="bg-white shadow-2xs rounded-2xl ">
-        <div class="text-black grid grid-cols-2 gap-4 relative min-h-[450px]">
+        <div class="text-black grid grid-cols-2 gap-4 relative h-auto">
           <div class="z-10 flex p-13 flex-col text-center self-center">
 
             <div x-show="displayStudies">
@@ -167,14 +167,14 @@
     </div>
 
     <div>
-      <div class="grid grid-cols-2 p-10 gap-3">
-        <div id="allContent" class="relative p-10 top-0 h-auto ">
-          <div class="flex items-center">
-            <img src="./img/Proyectos/GestionPersonas/personasuf6.png" class="shadow rounded-2xl w-full h-[75%]"
+      <div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-3 h-auto">
+        <div id="allContent" class=" p-10 top-0 h-auto ">
+          <div class="flex items-center relative">
+            <img src="./img/Proyectos/GestionPersonas/personasuf6.png" id="imgProject" class=" shadow rounded-2xl w-full h-[75%]"
               alt="personas">
             <div id="card"
-              class="bg-black absolute h-auto right-0 w-[65%] bottom-0 text-white rounded-2xl shadow-2xl shadow-black z-10">
-              <div class="p-5 text-2xl font-[Lato]">
+            class="bg-black absoluteContent h-auto w-full md:w-[65%] text-white rounded-2xl shadow-2xl shadow-black z-10">
+              <div class="p-10 text-2xl font-[Lato]">
                 <div class="flex py-6">
                   <i class="fa-solid fa-person text-7xl w-[10%]"></i>
                   <h1 class=" w-[80%] ">Gestión Personas</h1>
@@ -195,17 +195,17 @@
                         <div
                           class=" grid grid-cols-2 justify-between text-justify gap-3 mt-4 space-y-3 text-gray-700 text-2xl h-[60%]">
                           <article>
-                            <div >
+                            <div>
                               <div class="p-10 w-[100%] relative rounded-2xl m-auto flex justify-center">
 
-                              <!--   <video src="./img/Proyectos/GestionPersonas/programaVideo.mp4" controls
+                                <!--   <video src="./img/Proyectos/GestionPersonas/programaVideo.mp4" controls
                                   autoplay></video> -->
 
-                                  <iframe width="560" height="315" src="https://www.youtube.com/embed/NWpPXzwKLD8"
-                                    title="Anuncio Compotech" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                           
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/NWpPXzwKLD8"
+                                  title="Anuncio Compotech" frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowfullscreen></iframe>
+
                               </div>
                             </div>
                           </article>
@@ -496,29 +496,69 @@
               <div id="contentCard">
                 <div>
                   <div id="content3" class="hidden">
-                    <div class="max-w-5xll mx-auto p-10 bg-violet-200 rounded-lg shadow-md ">
+                    <div class="max-w-5xll mx-auto p-10 bg-blue-200 rounded-lg shadow-md ">
 
-                      <p class="text-gray-700 ">El Programa se encarga de poder gestionar diversas
-                        funcionalidades de
-                        gestion sobre empleados y clientes. Este programa seria ideal para una
-                        empresa que quiera tener un control
-                        sobre los clientes y empleados que hay actualmente.
+                      <p class="text-gray-700 ">Mediante el <b class="text-indigo-600">Laravel y Livewire</b> he programado una página web de
+                        blogs donde un usuario no registrado, puedes ver todos los blogs que han subido otros usuario,
+                        también puedes registrarte en caso de que sea tu primera vez en la página web, o iniciar sesión.
+                        Si estás logueado en la página web, puedes acceder a las siguientes funcionalidades
                       </p>
 
 
                       <div
                         class=" grid grid-cols-2 justify-between text-justify gap-3 mt-4 space-y-3 text-gray-700 text-2xl h-[60%]">
                         <article>
+
+
+                          <div class="py-10">
+                            <span class="font-seibold text-indigo-600 font-bold">Sistema de comentarios:</span>
+                            Si el usuario hace click a un blog, se muestra el título del blog junto al autor y el
+                            contenido. En la parte inferior, el usuario tiene la posibilidad de comentar en el post y
+                            los otros usuarios que entren al blog podrán responder a ese comentario, o hacer nuevos
+                            comentarios.
+                          </div>
+
+                          <div class="py-10">
+                            <span class="text-indigo-600 font-bold">Creación de un Blog:
+                            </span>
+                            El usuario tiene una interfaz donde puede crear un nuevo blog si lo desea con información
+                            detallada como el título, descripción, género e imagen.
+                          </div>
+
+                          <div class="py-10">
+                            <span class="font-seibold text-indigo-600 font-bold">Actualización de un Blog:
+                            </span>
+                            En caso de que el usuario quiera hacer cambios en el blog que ya ha publicado previamente,
+                            también tiene la posibilidad de realizar cualquier cambio del blog.
+                          </div>
+
+                          <div class="py-10">
+                            <span class="font-seibold text-indigo-600 font-bold">Borrar Blog:
+                            </span>
+                            En caso de que ese usuario quiera eliminar algún blog por cualquier motivo, tiene un boton
+                            donde puede eliminarlo.
+                          </div>
+
+                          <div class="py-10">
+                            <span class="font-seibold text-indigo-600 font-bold">Sistema de Búsqueda:</span>
+                            Hayas iniciado sesión o no, tienes la posibilidad de buscar un blog por el nombre o mediante
+                            un filtro de género.
+                          </div>
+
+
+
+                        </article>
+
+
+
                       </div>
                     </div>
                   </div>
-
-                  <p class="text-justify" id="principalContent3">En mi 1r año de <span class="font-bold">Ciclo Superior
-                      de
-                      Desarrollo de Aplicaciones Web</span> desarrollé junto a mis compañeros Marc y David un proyecto
-                    donde
-                    simulamos la creación de una
-                    empresa llamada Compotech que se dedicaba a la venta de componentes informáticos. </p>
+                  <p class="text-justify" id="principalContent3">En <span class="font-bold">DAW 2</span> durante mi
+                    estancia de <span class="font-bold"></span> en la
+                    empresa <span class="font-bold">Strategying</span> realicé una
+                    pagina web donde los usuarios pueden publicar su propio blog con la posibilidad de personalizarlo y
+                    ver posts de cualquier tematica.</p>
                 </div>
 
                 <div class="py-2.5">
@@ -527,23 +567,33 @@
                   <div class="grid grid-cols-2 py-4">
                     <div>
                       <p>Frontend</p>
-                      <div class="flex justify-start py-3 gap-6">
-                        <p class="bg-violet-500 font-bold text-black rounded-xl p-1.5"><i
+                      <div class="flex justify-start py-3 gap-6 flex-wrap ">
+                        <p class="bg-blue-500 font-bold text-black rounded-xl p-1.5"><i
                             class="fa-brands fa-html5 text-black-800"></i> HTML
                         </p>
-                        <p class="bg-violet-500 font-bold text-black  rounded-xl p-1.5"><i
-                            class="fa-brands fa-css3 text-black-600"></i> CSS
+                        <p class="bg-blue-500 font-bold text-black rounded-xl p-1.5"><i
+                            class="fa-brands fa-js text-black-800"></i> Javascript
+                        </p>
+                        <p class="bg-blue-500 font-bold text-black rounded-xl p-1.5"><i
+                            class="fa-brands fa-js text-black-800"></i> AlpineJS
+                        </p>
+                        <p class="bg-blue-500 font-bold text-black rounded-xl p-1.5">
+                          Livewire
+                        </p>
+                        <p class="bg-blue-500 font-bold text-black rounded-xl p-1.5"><i
+                            class="fa-brands fa-css3 text-black-800"></i> Tailwind
                         </p>
                       </div>
                     </div>
                     <div>
                       <p>Backend</p>
-                      <div class="flex justify-start py-3 gap-6">
-                        <p class="bg-violet-500 font-bold text-black rounded-xl p-1.5"><i
-                            class="fa-brands fa-symfony text-black-800"></i> PHP
+                      <div class="flex justify-start py-3 gap-6 ">
+                        <p class="bg-blue-500 font-bold text-black rounded-xl p-1.5"><i
+                            class="fa-brands fa-laravel text-black-800"></i> Laravel
                         </p>
-                        <p class="bg-violet-500 font-bold text-black rounded-xl p-1.5"><i
-                            class="fa-brands fa-java text-black-800"></i> MySQL</p>
+                        <p class="bg-blue-500 font-bold text-black rounded-xl p-1.5"><i
+                            class="fa-solid fa-database text-black-800"></i> HeidiSQL
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -598,7 +648,8 @@
                   <p class="text-justify">Acualmente estoy en <span class="font-bold">2ndo año de DAW</span>, y junto a
                     mis compañeros Pol
                     Carvajal y Marc Muntané
-                    estamos programando esta pagina web donde donde cuentas con un gran catalogo de peliculas de todo tipo
+                    estamos programando esta pagina web donde donde cuentas con un gran catalogo de peliculas de todo
+                    tipo
                     disponibles para ver!</p>
                 </div>
 

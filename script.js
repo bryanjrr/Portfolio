@@ -205,7 +205,7 @@ const tarjetas = [
     allContentId: "allContent",
     bigContentClass: "bigContent",
     secondaryContent: "content",
-    row: "1"
+    img: "imgProject"
   },
   {
     triggerId: "miInfo2",
@@ -216,7 +216,6 @@ const tarjetas = [
     allContentId: "allContent2",
     bigContentClass: "bigContent",
     secondaryContent: "content2",
-    row: "2"
 
   },
   {
@@ -228,7 +227,6 @@ const tarjetas = [
     allContentId: "allContent3",
     bigContentClass: "bigContent",
     secondaryContent: "content3",
-    row: "3"
   },
   {
     triggerId: "miInfo4",
@@ -239,7 +237,6 @@ const tarjetas = [
     allContentId: "allContent4",
     bigContentClass: "bigContent",
     secondaryContent: "content4",
-    row: "4"
   },
 
 ];
@@ -252,13 +249,16 @@ tarjetas.forEach(tarjeta => {
   const returnButton = document.getElementById(tarjeta.returnButtonId);
   const back = document.getElementById(tarjeta.backId);
   const allContent = document.getElementById(tarjeta.allContentId);
-  const content = document.getElementById(tarjeta.secondaryContent)
+  const content = document.getElementById(tarjeta.secondaryContent);
+  let imgProject = document.getElementById(tarjeta.img);
 
   trigger.addEventListener("click", function (e) {
     e.preventDefault();
     card.classList.add("transformed");
+    card.classList.remove("absoluteContent");
+    imgProject.style.display = "none";
+
     setTimeout(function () {
-      allContent.style.gridRow = tarjeta.row;
       allContent.classList.add(tarjeta.bigContentClass);
       content.classList.toggle("textoTransformed");
       content.style.display = "block";
@@ -271,11 +271,14 @@ tarjetas.forEach(tarjeta => {
 
   back.addEventListener("click", function (e) {
     e.preventDefault();
+    card.classList.add("absoluteContent");
     card.classList.remove("transformed");
     principalContent.style.display = "block";
     content.style.display = "none";
     returnButton.style.display = "none";
     allContent.classList.remove(tarjeta.bigContentClass);
+    imgProject.style.display = "flex";
+
   });
 });
 
