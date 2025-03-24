@@ -58,7 +58,7 @@
           <img src="./img/foto.jpg" class="rounded-2xl w-130 shadow-cs shadow-gray-50" alt="">
         </div>
         <div class="justify-center flex flex-col p-7 ">
-          <h1 class="font-[Russo_One] text-center text-white">Bryan Joya Rubio</h1>
+          <h1 class="font-[Russo_One] text-center text-white ">Bryan Joya Rubio</h1>
           <h2 class="font-sans text-5xl p-9 border-b-3 text-center text-white ">Desarrollador Web</h2>
           <ul class="flex gap-5 justify-center p-5">
             <li class="border p-3 rounded-3xl cursor-pointer text-white card-icon ">
@@ -112,7 +112,6 @@
     </div>
 
     <div class="h-320 p-4 md:p-30 grid grid-cols-1 md:grid-cols-[15%_80%] gap-5 justify-center w-full">
-      <!-- Columna izquierda -->
       <div class="w-full md:w-[20%]">
         <div class="flex h-full flex-col gap-2 self-center">
           <button x-on:click="indice=0, displayStudies=true"
@@ -126,19 +125,15 @@
         </div>
       </div>
 
-      <!-- Columna derecha -->
       <div class="bg-white shadow-2xs rounded-2xl w-full h-full">
         <div class="text-black grid grid-cols-1 md:grid-cols-2 gap-4 relative h-full">
-          <!-- Contenido central -->
           <div class="z-10 flex p-6 flex-col text-center self-center">
 
-            <!-- Estudios -->
             <div x-show="displayStudies">
               <p x-text="estudios[indice].title" class="text-3xl md:text-4xl py-6 font-bold"></p>
               <p x-text="estudios[indice].description" class="text-xl md:text-2xl text-justify"></p>
             </div>
 
-            <!-- Experiencia -->
             <div x-show="!displayStudies">
               <p x-text="experiencia[indice].title" class="text-3xl md:text-4xl py-6 font-bold"></p>
               <p x-text="experiencia[indice].description" class="text-xl md:text-2xl text-justify"></p>
@@ -146,14 +141,12 @@
 
           </div>
 
-          <!-- Imagen -->
-          <div class="studiesImage relative rounded-2xl">
+          <div class="md:studiesImage relative rounded-2xl">
             <img x-show="displayStudies" x-bind:src="estudios[indice].image" class="w-full h-full object-cover" alt="">
             <img x-show="!displayStudies" x-bind:src="experiencia[indice].image" class="w-full h-full object-cover"
               alt="">
           </div>
 
-          <!-- Botones de navegación -->
           <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-3 mt-8 z-10">
             <button x-show="indice > 0" x-on:click="indice--"
               class="bg-white shadow border text-black p-3 md:p-5 rounded-xl text-2xl md:text-3xl cursor-pointer">
