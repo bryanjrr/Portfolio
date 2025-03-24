@@ -124,6 +124,13 @@ function personalizarVentana(contenido, imagenSrc = null) {
   }
 }
 
+let menuBtn = document.getElementById("menuBtn");
+
+menuBtn.addEventListener("click", function(){
+  let list = document.getElementById("listMenu");
+  list.classList.toggle("dFlex");
+})
+
 const opciones = document.querySelectorAll("[id^='option-']");
 
 opciones.forEach(opcion => {
@@ -184,6 +191,8 @@ opciones.forEach(opcion => {
   })
 });
 
+
+
 async function cargarEstudios() {
   let respuesta = await fetch('./estudios.json');
   return respuesta.json();
@@ -205,10 +214,10 @@ const tarjetas = [
     allContentId: "allContent",
     bigContentClass: "bigContent",
     secondaryContent: "content",
-    img: "imgProject"
+    img: "imgProject1"
   },
   {
-    triggerId: "miInfo2",
+    triggerId: "mInfo2",
     cardId: "card2",
     principalContentId: "principalContent2",
     returnButtonId: "returnButton2",
@@ -216,10 +225,10 @@ const tarjetas = [
     allContentId: "allContent2",
     bigContentClass: "bigContent",
     secondaryContent: "content2",
-
+    img: "imgProject2"
   },
   {
-    triggerId: "miInfo3",
+    triggerId: "mInfo3",
     cardId: "card3",
     principalContentId: "principalContent3",
     returnButtonId: "returnButton3",
@@ -227,9 +236,10 @@ const tarjetas = [
     allContentId: "allContent3",
     bigContentClass: "bigContent",
     secondaryContent: "content3",
+    img: "imgProject3"
   },
   {
-    triggerId: "miInfo4",
+    triggerId: "mInfo4",
     cardId: "card4",
     principalContentId: "principalContent4",
     returnButtonId: "returnButton4",
@@ -237,6 +247,7 @@ const tarjetas = [
     allContentId: "allContent4",
     bigContentClass: "bigContent",
     secondaryContent: "content4",
+    img: "imgProject4"
   },
 
 ];
@@ -255,18 +266,19 @@ tarjetas.forEach(tarjeta => {
   trigger.addEventListener("click", function (e) {
     e.preventDefault();
     card.classList.add("transformed");
-    card.classList.remove("absoluteContent");
     imgProject.style.display = "none";
+    allContent.classList.add(tarjeta.bigContentClass);
+    card.classList.remove("absoluteContent")
+
 
     setTimeout(function () {
-      allContent.classList.add(tarjeta.bigContentClass);
       content.classList.toggle("textoTransformed");
       content.style.display = "block";
       returnButton.classList.add("textoTransformed");
       returnButton.style.display = "block";
       principalContent.style.display = "none";
 
-    }, 1000);
+    }, 500);
   });
 
   back.addEventListener("click", function (e) {

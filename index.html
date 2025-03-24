@@ -27,12 +27,15 @@
 
 <body>
 
-  <header class="bg-black flex items-center w-full justify-between fixed p-9 top-0 z-20">
-    <div>
+  <header class="bg-black grid grid-cols-1 md:grid-cols-2 items-center w-full fixed p-9 top-0 z-20">
+    <div class="grid grid-cols-2">
       <h2 class="text-white font-[Russo_One] text-5xl cursor-pointer">BryanJr</h2>
+      <div id="menuBtn" class="cursor-pointer flex justify-end md:hidden">
+        <i class="fa-solid fa-bars text-white text-5xl"></i>
+      </div>
     </div>
     <div>
-      <nav class="flex gap-15">
+      <nav id="listMenu" class="sm:hidden flex gap-15 flex-col text-center md:flex-row md:justify-end">
         <a href="" class="text-white text-3xl no-underline font-sans hover-underline"><i class="fa-solid fa-house"></i>
           Inicio</a>
         <a href="" class="text-white text-3xl no-underline font-sans hover-underline"><i class="fa-solid fa-user"></i>
@@ -77,252 +80,266 @@
       </div>
   </section>
   <section class="bg-gradient-to-b from-black to-red-900 relative p-5 ">
-    <div class="text-white text-5xl p-10  w-[30%] border">
+    <div class="text-white text-5xl p-10 w-full md:w-[30%] border">
       <h2 class="font-bold"><i class="fa-solid fa-user mr-6"></i>Sobre Mi </h2>
     </div>
-    <div class="relative">
-      <img src="./img/portatil.png" class="max-w-[56%] max mx-auto" style="margin-top: -165px;" alt="portatil">
-    </div>
-    <div
-      class="absolute right-[34.1%] h-[41.5%] top-[16.6%] bg-gray-950 w-[31.5%] rounded-2xl border flex-col text-center border-white flex ">
-      <div class="border border-white rounded-t-2xl">
-        <div class="text-white text-3xl flex gap-5 p-5 ">
-          <p class="cursor-pointer window-menu" id="option-sobreMi">Sobre Mi</p>
-          <p class="cursor-pointer window-menu" id="option-softSkills">Soft Skills</p>
-          <p class="cursor-pointer window-menu" id="option-hobbies">Hobbies</p>
+
+      <div class="relative">
+        <img src="./img/portatil.png" class="max-w-[56%] max mx-auto" style="margin-top: -165px;" alt="portatil">
+      </div>
+      <div
+        class="absolute right-[34.1%] h-[41.5%] top-[16.6%] bg-gray-950 w-[31.5%] rounded-2xl border flex-col text-center border-white flex ">
+        <div class="border border-white rounded-t-2xl">
+          <div class="text-white text-3xl flex gap-5 p-5 ">
+            <p class="cursor-pointer window-menu" id="option-sobreMi">Sobre Mi</p>
+            <p class="cursor-pointer window-menu" id="option-softSkills">Soft Skills</p>
+            <p class="cursor-pointer window-menu" id="option-hobbies">Hobbies</p>
+          </div>
+        </div>
+
+        <div id="window-content"
+          class=" cursor-pointer m-[2.5rem] align-middle h-[495px] border rounded-2xl border-white flex justify-center items-center text-[15px]">
+          <p class="text-white animate-pulse "></i>Selecciona una opcion... </p>
         </div>
       </div>
+    
 
-      <div id="window-content"
-        class=" cursor-pointer m-[2.5rem] align-middle h-[495px] border rounded-2xl border-white flex justify-center items-center text-[15px]">
-        <p class="text-white animate-pulse "></i>Selecciona una opcion... </p>
-      </div>
-    </div>
   </section>
   <section class="bg-red-900 p-5" x-data="{estudios: [], experiencia: [], indice: 0, displayStudies: false}"
     x-init="estudios = await cargarEstudios(), experiencia = await cargarExperiencia()">
-    <div class="text-white text-5xl p-10 w-[30%] border">
+    <div class="text-white text-5xl p-10 w-full md:w-[30%] border">
       <h2 class="font-bold"><i class="fa-solid fa-books mr-6"></i>Estudios & Experiencia</h2>
     </div>
 
-    <div class="p-30 flex gap-5 justify-center max-w-2/3 m-auto ">
-      <div class="flex h-90 flex-col gap-2 self-center">
-        <button x-on:click="indice=0, displayStudies= true"
-          class="bg-white p-5 rounded-2xl shadow-2xl min-w-2xs h-50 cursor-pointer">
-          <i class="fa-solid fa-graduation-cap text-6xl"></i>
-        </button>
-        <button x-on:click="displayStudies = false"
-          class="bg-white p-5 rounded-2xl shadow-2xl min-w-2xs h-50 cursor-pointer">
-          <i class="fa-solid fa-suitcase text-6xl"></i>
-        </button>
+    <div class="h-320 p-4 md:p-30 grid grid-cols-1 md:grid-cols-[15%_80%] gap-5 justify-center w-full">
+      <!-- Columna izquierda -->
+      <div class="w-full md:w-[20%]">
+        <div class="flex h-full flex-col gap-2 self-center">
+          <button x-on:click="indice=0, displayStudies=true"
+            class="bg-white p-5 rounded-2xl shadow-2xl min-w-2xs h-24 md:h-50 cursor-pointer">
+            <i class="fa-solid fa-graduation-cap text-4xl md:text-6xl"></i>
+          </button>
+          <button x-on:click="displayStudies = false"
+            class="bg-white p-5 rounded-2xl shadow-2xl min-w-2xs h-24 md:h-50 cursor-pointer">
+            <i class="fa-solid fa-suitcase text-4xl md:text-6xl"></i>
+          </button>
+        </div>
       </div>
 
-      <div class="bg-white shadow-2xs rounded-2xl ">
-        <div class="text-black grid grid-cols-2 gap-4 relative h-auto">
-          <div class="z-10 flex p-13 flex-col text-center self-center">
+      <!-- Columna derecha -->
+      <div class="bg-white shadow-2xs rounded-2xl w-full h-full">
+        <div class="text-black grid grid-cols-1 md:grid-cols-2 gap-4 relative h-full">
+          <!-- Contenido central -->
+          <div class="z-10 flex p-6 flex-col text-center self-center">
 
+            <!-- Estudios -->
             <div x-show="displayStudies">
-              <p x-text="estudios[indice].title" class="text-4xl py-6 font-bold"></p>
-              <p x-text="estudios[indice].description" class="text-2xl text-justify"></p>
+              <p x-text="estudios[indice].title" class="text-3xl md:text-4xl py-6 font-bold"></p>
+              <p x-text="estudios[indice].description" class="text-xl md:text-2xl text-justify"></p>
             </div>
 
+            <!-- Experiencia -->
             <div x-show="!displayStudies">
-              <p x-text="experiencia[indice].title" class="text-4xl py-6 font-bold"></p>
-              <p x-text="experiencia[indice].description" class="text-2xl text-justify"></p>
+              <p x-text="experiencia[indice].title" class="text-3xl md:text-4xl py-6 font-bold"></p>
+              <p x-text="experiencia[indice].description" class="text-xl md:text-2xl text-justify"></p>
             </div>
 
           </div>
 
+          <!-- Imagen -->
           <div class="studiesImage relative rounded-2xl">
-            <img x-show="displayStudies" x-bind:src="estudios[indice].image" class="w-full h-full" alt="">
+            <img x-show="displayStudies" x-bind:src="estudios[indice].image" class="w-full h-full object-cover" alt="">
             <img x-show="!displayStudies" x-bind:src="experiencia[indice].image" class="w-full h-full object-cover"
               alt="">
           </div>
-          <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 flex gap-5 pb-3s mt-8 z-10">
+
+          <!-- Botones de navegación -->
+          <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 pb-3 mt-8 z-10">
             <button x-show="indice > 0" x-on:click="indice--"
-              class="bg-white shadow border text-black p-5 rounded-xl text-3xl cursor-pointer">
+              class="bg-white shadow border text-black p-3 md:p-5 rounded-xl text-2xl md:text-3xl cursor-pointer">
               <i class="fa-solid fa-chevron-left"></i>
             </button>
 
             <button x-show="displayStudies && indice !== estudios.length - 1" x-on:click="indice++"
-              class="bg-white shadow border text-black p-5 rounded-xl text-3xl cursor-pointer">
+              class="bg-white shadow border text-black p-3 md:p-5 rounded-xl text-2xl md:text-3xl cursor-pointer">
               <i class="fa-solid fa-chevron-right"></i>
             </button>
 
             <button x-show="!displayStudies && indice !== experiencia.length - 1" x-on:click="indice++"
-              class="bg-white shadow border text-black p-5 rounded-xl text-3xl cursor-pointer">
+              class="bg-white shadow border text-black p-3 md:p-5 rounded-xl text-2xl md:text-3xl cursor-pointer">
               <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
         </div>
-
       </div>
     </div>
+
   </section>
 
 
   <section class="bg-red-900 p-5">
-    <div class="text-white text-5xl p-10  w-[30%] border">
+    <div class="text-white text-5xl p-10 w-full  md:w-[30%] border">
       <h2 class="font-bold"><i class="fa-solid fa-code mr-6"></i>Proyectos</h2>
     </div>
 
     <div>
-      <div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-3 h-auto">
-        <div id="allContent" class=" p-10 top-0 h-auto ">
-          <div class="flex items-center relative">
-            <img src="./img/Proyectos/GestionPersonas/personasuf6.png" id="imgProject" class=" shadow rounded-2xl w-full h-[75%]"
-              alt="personas">
-            <div id="card"
-            class="bg-black absoluteContent h-auto w-full md:w-[65%] text-white rounded-2xl shadow-2xl shadow-black z-10">
-              <div class="p-10 text-2xl font-[Lato]">
-                <div class="flex py-6">
-                  <i class="fa-solid fa-person text-7xl w-[10%]"></i>
-                  <h1 class=" w-[80%] ">Gestión Personas</h1>
-                </div>
-                <div id="contentCard">
-                  <div>
-                    <div id="content" class="hidden">
-                      <div class="max-w-5xll mx-auto p-10 bg-violet-200 rounded-lg shadow-md ">
+      <div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-3 h-auto ">
+        <div id="allContent" class=" p-10 top-0 h-auto relative">
+          <img src="./img/Proyectos/GestionPersonas/personasuf6.png" id="imgProject1"
+            class=" shadow rounded-2xl w-full h-[75%]" alt="personas">
+          <div id="card"
+            class="absoluteContent bg-black  h-auto w-full md:w-[65%] text-white rounded-2xl shadow-2xl shadow-black z-10">
+            <div class="p-10 text-2xl font-[Lato]">
+              <div class="flex py-6">
+                <i class="fa-solid fa-person text-7xl w-[10%]"></i>
+                <h1 class=" w-[80%] ">Gestión Personas</h1>
+              </div>
+              <div id="contentCard">
+                <div>
+                  <div id="content" class="hidden">
+                    <div class="max-w-5xll mx-auto p-10 bg-violet-200 rounded-lg shadow-md ">
 
-                        <p class="text-gray-700 ">El Programa se encarga de poder gestionar diversas
-                          funcionalidades de
-                          gestion sobre empleados y clientes. Este programa seria ideal para una
-                          empresa que quiera tener un control
-                          sobre los clientes y empleados que hay actualmente.
-                        </p>
+                      <p class="text-gray-700 ">El Programa se encarga de poder gestionar diversas
+                        funcionalidades de
+                        gestion sobre empleados y clientes. Este programa seria ideal para una
+                        empresa que quiera tener un control
+                        sobre los clientes y empleados que hay actualmente.
+                      </p>
 
 
-                        <div
-                          class=" grid grid-cols-2 justify-between text-justify gap-3 mt-4 space-y-3 text-gray-700 text-2xl h-[60%]">
-                          <article>
-                            <div>
-                              <div class="p-10 w-[100%] relative rounded-2xl m-auto flex justify-center">
+                      <div
+                        class=" grid grid-cols-2 justify-between text-justify gap-3 mt-4 space-y-3 text-gray-700 text-2xl h-[60%]">
+                        <article>
+                          <div>
+                            <div class="p-10 w-[100%] relative rounded-2xl m-auto flex justify-center">
 
-                                <!--   <video src="./img/Proyectos/GestionPersonas/programaVideo.mp4" controls
+                              <!--   <video src="./img/Proyectos/GestionPersonas/programaVideo.mp4" controls
                                   autoplay></video> -->
 
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/NWpPXzwKLD8"
-                                  title="Anuncio Compotech" frameborder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen></iframe>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/NWpPXzwKLD8"
+                                title="Anuncio Compotech" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
 
-                              </div>
                             </div>
-                          </article>
+                          </div>
+                        </article>
 
-                          <article>
-                            <div class="py-3">
-                              <span class="font-semibold text-indigo-600 ">Alta de nuevas
-                                personas:</span>
-                              Cuando damos de alta una nueva persona, tenemos la opción de dar de
-                              alta
-                              a un empleado o a un cliente. Una vez seleccionado el tipo persona,
-                              tenemos una interfaz donde tenemos la posibilidad de introducir
-                              todos
-                              los datos
-                              correspondientes de la persona.
-                              Tambien Es posible añadir vehículos y vincularlos a las
-                              personas registradas
-                              en
-                              el sistema. Cada
-                              vehículo incluye información como la marca, modelo, matrícula, y
-                              otros
-                              datos importantes.
-                            </div>
+                        <article>
+                          <div class="py-3">
+                            <span class="font-semibold text-indigo-600 ">Alta de nuevas
+                              personas:</span>
+                            Cuando damos de alta una nueva persona, tenemos la opción de dar de
+                            alta
+                            a un empleado o a un cliente. Una vez seleccionado el tipo persona,
+                            tenemos una interfaz donde tenemos la posibilidad de introducir
+                            todos
+                            los datos
+                            correspondientes de la persona.
+                            Tambien Es posible añadir vehículos y vincularlos a las
+                            personas registradas
+                            en
+                            el sistema. Cada
+                            vehículo incluye información como la marca, modelo, matrícula, y
+                            otros
+                            datos importantes.
+                          </div>
 
-                            <div class="py-3">
-                              <span class="font-semibold text-indigo-600 ">Buscar</span>
-                              En caso de que queramos ver un listado de personas con un nombre en especifico, esta
-                              funcionalidad lo hace y te da como resultado un listado de todos usuarios junto a
-                              informacion adicional
-                            </div>
+                          <div class="py-3">
+                            <span class="font-semibold text-indigo-600 ">Buscar</span>
+                            En caso de que queramos ver un listado de personas con un nombre en especifico, esta
+                            funcionalidad lo hace y te da como resultado un listado de todos usuarios junto a
+                            informacion adicional
+                          </div>
 
-                            <div class="py-3">
-                              <span class="font-semibold text-indigo-600 ">Mostrar uno</span>
-                              En 3r lugar tambien hay una funcionalidad donde puedes buscar por a un cliente o empleado
-                              mediante su DNI y como resultado te mostrara los datos de la persona
-                            </div>
-                            <div>
-                              <span class="font-semibold text-indigo-600">Actualización de
-                                datos:</span>
-                              El sistema permite modificar la información existente de personas
-                              registradas. Esto incluye la
-                              actualización de datos personales o la adición/eliminación de vehículos
-                              asociados.
-                            </div>
+                          <div class="py-3">
+                            <span class="font-semibold text-indigo-600 ">Mostrar uno</span>
+                            En 3r lugar tambien hay una funcionalidad donde puedes buscar por a un cliente o empleado
+                            mediante su DNI y como resultado te mostrara los datos de la persona
+                          </div>
+                          <div>
+                            <span class="font-semibold text-indigo-600">Actualización de
+                              datos:</span>
+                            El sistema permite modificar la información existente de personas
+                            registradas. Esto incluye la
+                            actualización de datos personales o la adición/eliminación de vehículos
+                            asociados.
+                          </div>
 
-                            <div class="py-10">
-                              <span class="font-semibold text-indigo-600">Eliminación de
-                                personas:</span>
-                              Los usuarios tienen la opción de dar de baja a personas del sistema, lo
-                              que elimina también la
-                              relación con cualquier vehículo que estuviera registrado.
-                            </div>
-                            <div>
-                          </article>
-                        </div>
-
-
+                          <div class="py-10">
+                            <span class="font-semibold text-indigo-600">Eliminación de
+                              personas:</span>
+                            Los usuarios tienen la opción de dar de baja a personas del sistema, lo
+                            que elimina también la
+                            relación con cualquier vehículo que estuviera registrado.
+                          </div>
+                          <div>
+                        </article>
                       </div>
-                    </div>
 
-                    <p class="text-justify" id="principalContent">En mi 1r año de DAW empecé programando con el lenguaje
-                      <span class="font-bold">Java</span> donde consegui adquirir
-                      bases solidas que me permitieron hacer este programa con interfaz grafica, encargada de la gestion
-                      de
-                      personas y vehiculos.
-                    </p>
-                  </div>
 
-                  <div class="py-2.5">
-                    <p class="font-bold">Tecnologias Utilizadas:</p>
-
-                    <div class="grid grid-cols-2 py-4 justify-center">
-                      <div>
-                        <p>Frontend</p>
-                        <div class="flex justify-start py-3 gap-6 flex-wrap ">
-                          <p class="bg-white font-bold text-black rounded-xl p-1.5"><i
-                              class="fa-solid fa-frame text-black-800"></i> JFrame
-                          </p>
-                        </div>
-                      </div>
-                      <div>
-                        <p>Backend</p>
-                        <div class="flex justify-start py-3 gap-6 ">
-                          <p class="bg-white font-bold text-black rounded-xl p-1.5"><i
-                              class="fa-brands fa-java text-black-800"></i> Java
-                          </p>
-                          <p class="bg-white font-bold text-black rounded-xl p-1.5"><i
-                              class="fa-solid fa-database text-black-800"></i> MySQL
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
-                  <div class="flex justify-around" id="footer">
-                    <a class="text-blue-600 py cursor-pointer" id="mInfo1">Mas Información <i
-                        class="fa-solid fa-circle-info"></i></a>
-                    <a target="_blank" class="text-blue-600 py"
-                      href="https://github.com/bryanjrr/Gestion-Personas-Java.git">Link
-                      Repositorio <i class="fa-brands fa-github"></i></a>
-                    <div id="returnButton" style="display: none;">
-                      <a id="back" class="text-blue-600 py cursor-pointer">Volver
-                        <i class="fa-solid fa-turn-left"></i></a>
+
+                  <p class="text-justify" id="principalContent">En mi 1r año de DAW empecé programando con el lenguaje
+                    <span class="font-bold">Java</span> donde consegui adquirir
+                    bases solidas que me permitieron hacer este programa con interfaz grafica, encargada de la gestion
+                    de
+                    personas y vehiculos.
+                  </p>
+                </div>
+
+                <div class="py-2.5">
+                  <p class="font-bold">Tecnologias Utilizadas:</p>
+
+                  <div class="grid grid-cols-2 py-4 justify-center">
+                    <div>
+                      <p>Frontend</p>
+                      <div class="flex justify-start py-3 gap-6 flex-wrap ">
+                        <p class="bg-white font-bold text-black rounded-xl p-1.5"><i
+                            class="fa-solid fa-frame text-black-800"></i> JFrame
+                        </p>
+                      </div>
                     </div>
+                    <div>
+                      <p>Backend</p>
+                      <div class="flex justify-start py-3 gap-6 ">
+                        <p class="bg-white font-bold text-black rounded-xl p-1.5"><i
+                            class="fa-brands fa-java text-black-800"></i> Java
+                        </p>
+                        <p class="bg-white font-bold text-black rounded-xl p-1.5"><i
+                            class="fa-solid fa-database text-black-800"></i> MySQL
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-around" id="footer">
+                  <a class="text-blue-600 py cursor-pointer" id="mInfo1">Mas Información <i
+                      class="fa-solid fa-circle-info"></i></a>
+                  <a target="_blank" class="text-blue-600 py"
+                    href="https://github.com/bryanjrr/Gestion-Personas-Java.git">Link
+                    Repositorio <i class="fa-brands fa-github"></i></a>
+                  <div id="returnButton" style="display: none;">
+                    <a id="back" class="text-blue-600 py cursor-pointer">Volver
+                      <i class="fa-solid fa-turn-left"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+
         </div>
 
-        <div id="allContent2" class=" relative p-10 top-0 h-auto">
-          <img src="./img/Proyectos/Compotech/Compotech.png" class="shadow rounded-2xl w-full h-[75%]" alt="Compotech">
+        <div id="allContent2" class="p-10 top-0 h-auto relative">
+          <img src="./img/Proyectos/Compotech/Compotech.png" id="imgProject2" class=" shadow rounded-2xl w-full h-[75%]"
+            alt="personas">
           <div id="card2"
-            class="bg-black absolute h-auto right-0 w-[65%] bottom-0 text-white rounded-2xl shadow-2xl shadow-black z-10">
-            <div class="p-5 text-2xl font-[Lato]">
-              <div class="flex py-6">
+            class="absoluteContent p-10 bg-black  h-auto w-full md:w-[65%] text-white rounded-2xl shadow-2xl shadow-black z-10">
+            <div class="p- text-2xl font-[Lato]">
+
+              <div class="flex py-3">
                 <div class="w-[19%]">
                   <img src="./img/Proyectos/Compotech/logo-compotech.png" class="w-30" alt="">
                 </div>
@@ -366,7 +383,8 @@
 
                         <div>
                           <p class="text-gray-700 text-2x1 pb-5">
-                            En primer lugar empezamos creando un documento donde explicamos la <b>historia</b> , y como
+                            En primer lugar empezamos creando un documento donde explicamos la <b>historia</b> , y
+                            como
                             surgio
                             la <b>idea</b> de Compotech, el valor que <b>aportamos</b> como empresa y a que <b>publico
                               va
@@ -383,7 +401,8 @@
                             negocio y <b>un anuncio para la empresa.</b>
                           </p>
 
-                          <p class="text-gray-700 py-5">Una vez valoramos si la empresa podía seguir adelante, empezamos
+                          <p class="text-gray-700 py-5">Una vez valoramos si la empresa podía seguir adelante,
+                            empezamos
                             con
                             la
                             creación de la paleta de colores de la empresa y su logo y una vez hecho eso empezamos con
@@ -395,8 +414,10 @@
                           </p>
 
                           <p class="text-gray-700 py-5">
-                            Después de eso hicimos el diseño para <b>tablets</b> y por último lo adaptamos para entorno
-                            de <b>ordenador </b> y comenzamos a programarlo mediante los lenguajes <b>HTML, CSS </b> en
+                            Después de eso hicimos el diseño para <b>tablets</b> y por último lo adaptamos para
+                            entorno
+                            de <b>ordenador </b> y comenzamos a programarlo mediante los lenguajes <b>HTML, CSS </b>
+                            en
                             la parte
                             de FrontEnd y <b>PHP</b> en la parte de Backend con una base de datos creada mediante
                             <b>MySQL.</b>
@@ -429,7 +450,8 @@
                     </div>
                   </div>
 
-                  <p class="text-justify" id="principalContent2">En mi 1r año de <span class="font-bold">Ciclo Superior
+                  <p class="text-justify" id="principalContent2">En mi 1r año de <span class="font-bold">Ciclo
+                      Superior
                       de
                       Desarrollo de Aplicaciones Web</span> desarrollé junto a mis compañeros Marc y David un proyecto
                     donde
@@ -465,7 +487,7 @@
                   </div>
                 </div>
                 <div class="flex justify-around" id="footer">
-                  <a class="text-blue-600 py cursor-pointer" id="miInfo2">Mas Información <i
+                  <a class="text-blue-600 py cursor-pointer" id="mInfo2">Mas Información <i
                       class="fa-solid fa-circle-info"></i></a>
                   <a target="_blank" class="text-blue-600 py"
                     href="https://github.com/bryanjrr/Gestion-Personas-Java.git">Link
@@ -478,12 +500,17 @@
               </div>
             </div>
           </div>
+
         </div>
-        <div id="allContent3" class="relative p-10 top-0 h-auto">
-          <img src="./img/Proyectos/BlogBryan/blogbryan.png" class="shadow rounded-2xl w-full h-[75%]" alt="blogBryan">
+
+
+
+        <div id="allContent3" class=" p-10 top-0 h-auto relative ">
+          <img src="./img/Proyectos/BlogBryan/blogbryan.png" id="imgProject3" class=" shadow rounded-2xl w-full h-[75%]"
+            alt="personas">
           <div id="card3"
-            class="bg-black absolute h-auto right-0 w-[65%] bottom-0 text-white rounded-2xl shadow-2xl shadow-black z-10">
-            <div class="p-5 text-2xl font-[Lato]">
+            class="absoluteContent bg-black  h-auto w-full md:w-[65%] text-white rounded-2xl shadow-2xl shadow-black z-10">
+            <div class="p-10 text-2xl font-[Lato]">
               <div class="flex py-6">
                 <div class="w-[30%] text-2xl self-center text-center">
                   <h2
@@ -498,18 +525,16 @@
                   <div id="content3" class="hidden">
                     <div class="max-w-5xll mx-auto p-10 bg-blue-200 rounded-lg shadow-md ">
 
-                      <p class="text-gray-700 ">Mediante el <b class="text-indigo-600">Laravel y Livewire</b> he programado una página web de
+                      <p class="text-gray-700 ">Mediante el <b class="text-indigo-600">Laravel y Livewire</b> he
+                        programado una página web de
                         blogs donde un usuario no registrado, puedes ver todos los blogs que han subido otros usuario,
-                        también puedes registrarte en caso de que sea tu primera vez en la página web, o iniciar sesión.
+                        también puedes registrarte en caso de que sea tu primera vez en la página web, o iniciar
+                        sesión.
                         Si estás logueado en la página web, puedes acceder a las siguientes funcionalidades
                       </p>
-
-
                       <div
                         class=" grid grid-cols-2 justify-between text-justify gap-3 mt-4 space-y-3 text-gray-700 text-2xl h-[60%]">
                         <article>
-
-
                           <div class="py-10">
                             <span class="font-seibold text-indigo-600 font-bold">Sistema de comentarios:</span>
                             Si el usuario hace click a un blog, se muestra el título del blog junto al autor y el
@@ -541,26 +566,21 @@
 
                           <div class="py-10">
                             <span class="font-seibold text-indigo-600 font-bold">Sistema de Búsqueda:</span>
-                            Hayas iniciado sesión o no, tienes la posibilidad de buscar un blog por el nombre o mediante
+                            Hayas iniciado sesión o no, tienes la posibilidad de buscar un blog por el nombre o
+                            mediante
                             un filtro de género.
                           </div>
-
-
-
                         </article>
-
-
-
                       </div>
                     </div>
                   </div>
                   <p class="text-justify" id="principalContent3">En <span class="font-bold">DAW 2</span> durante mi
                     estancia de <span class="font-bold"></span> en la
                     empresa <span class="font-bold">Strategying</span> realicé una
-                    pagina web donde los usuarios pueden publicar su propio blog con la posibilidad de personalizarlo y
+                    pagina web donde los usuarios pueden publicar su propio blog con la posibilidad de personalizarlo
+                    y
                     ver posts de cualquier tematica.</p>
                 </div>
-
                 <div class="py-2.5">
                   <p class="font-bold">Tecnologias Utilizadas:</p>
 
@@ -599,12 +619,12 @@
                   </div>
                 </div>
                 <div class="flex justify-around" id="footer">
-                  <a class="text-blue-600 py cursor-pointer" id="miInfo3">Mas Información <i
+                  <a class="text-blue-600 py cursor-pointer" id="mInfo3">Mas Información <i
                       class="fa-solid fa-circle-info"></i></a>
                   <a target="_blank" class="text-blue-600 py"
                     href="https://github.com/bryanjrr/Gestion-Personas-Java.git">Link
                     Repositorio <i class="fa-brands fa-github"></i></a>
-                  <div id="returnButton3" style="display: none;">
+                  <div id="returnButton" style="display: none;">
                     <a id="back3" class="text-blue-600 py cursor-pointer">Volver
                       <i class="fa-solid fa-turn-left"></i></a>
                   </div>
@@ -612,13 +632,18 @@
               </div>
             </div>
           </div>
+
         </div>
 
-        <div id="allContent4" class="relative p-10 top-0 h-auto">
-          <img src="./img/Proyectos/Cinefix/cineflix.png" class="shadow rounded-2xl w-full h-[75%]" alt="Cineflix">
+
+        <!-- ---------------------- -->
+
+        <div id="allContent4" class=" p-10 top-0 h-auto relative">
+          <img src="./img/Proyectos/Cinefix/cineflix.png" id="imgProject4" class=" shadow rounded-2xl w-full h-[75%]"
+            alt="personas">
           <div id="card4"
-            class="bg-black absolute h-auto right-0 w-[65%] bottom-0 text-white rounded-2xl shadow-2xl shadow-black z-10">
-            <div class="p-5 text-2xl font-[Lato]">
+            class="absoluteContent p-10 bg-black  h-auto w-full md:w-[65%] text-white rounded-2xl shadow-2xl shadow-black z-10">
+            <div class="p- text-2xl font-[Lato]">
               <div class="flex py-6">
                 <h1 class=" w-[80%] font-[Jaini]" style="font-size: 50px;"><span class="text-blue-600">{</span><span
                     class="text-red-600">{</span><span class="text-blue-500">CINE</span><span
@@ -628,31 +653,26 @@
               <div id="contentCard">
                 <div>
                   <div id="content4" class="hidden">
-                    <div class="max-w-5xll mx-auto p-10 bg-violet-200 rounded-lg shadow-md ">
-
-                      <p class="text-gray-700 ">El Programa se encarga de poder gestionar diversas
-                        funcionalidades de
-                        gestion sobre empleados y clientes. Este programa seria ideal para una
-                        empresa que quiera tener un control
-                        sobre los clientes y empleados que hay actualmente.
-                      </p>
+                    <div class="max-w-5xll mx-auto p-10 bg-red-200 rounded-lg shadow-md ">
 
 
                       <div
                         class=" grid grid-cols-2 justify-between text-justify gap-3 mt-4 space-y-3 text-gray-700 text-2xl h-[60%]">
                         <article>
+
+                        </article>
                       </div>
                     </div>
                   </div>
-
-                  <p class="text-justify">Acualmente estoy en <span class="font-bold">2ndo año de DAW</span>, y junto a
+                  <p class="text-justify" id="principalContent4">Acualmente estoy en <span class="font-bold">2ndo año
+                      de DAW</span>, y junto
+                    a
                     mis compañeros Pol
                     Carvajal y Marc Muntané
                     estamos programando esta pagina web donde donde cuentas con un gran catalogo de peliculas de todo
                     tipo
                     disponibles para ver!</p>
                 </div>
-
                 <div class="py-2.5">
                   <p class="font-bold">Tecnologias Utilizadas:</p>
 
@@ -682,12 +702,12 @@
                   </div>
                 </div>
                 <div class="flex justify-around" id="footer">
-                  <a class="text-blue-600 py cursor-pointer" id="miInfo4">Mas Información <i
+                  <a class="text-blue-600 py cursor-pointer" id="mInfo4">Mas Información <i
                       class="fa-solid fa-circle-info"></i></a>
                   <a target="_blank" class="text-blue-600 py"
                     href="https://github.com/bryanjrr/Gestion-Personas-Java.git">Link
                     Repositorio <i class="fa-brands fa-github"></i></a>
-                  <div id="returnButton3" style="display: none;">
+                  <div id="returnButton4" style="display: none;">
                     <a id="back4" class="text-blue-600 py cursor-pointer">Volver
                       <i class="fa-solid fa-turn-left"></i></a>
                   </div>
@@ -696,8 +716,6 @@
             </div>
           </div>
         </div>
-
-
       </div> <!-- Grid -->
     </div>
   </section>
