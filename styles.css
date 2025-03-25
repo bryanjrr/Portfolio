@@ -237,6 +237,7 @@ h1 {
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.4s ease-out;
+
 }
 
 .hover-underline::before {
@@ -311,17 +312,21 @@ h1 {
     overflow: hidden;
 }
 
-.studiesImage::before {
-    content: '';
-    position: absolute;
-    background: white;
-    left: -170px;
-    top: 50%;
-    transform: translateY(-50%) rotate(15deg);
-    width: 40%;
-    height: 140%;
+@media (width >=60rem) {
 
+    .studiesImage::before {
+        content: '';
+        position: absolute;
+        background: white;
+        left: -170px;
+        top: 50%;
+        transform: translateY(-50%) rotate(15deg);
+        width: 20%;
+        height: 140%;
+        background-color: black;
+    }
 }
+
 
 /* Mis Proyectos */
 .transformed {
@@ -338,7 +343,14 @@ h1 {
 .bigContent {
     animation: bigContent 1.5s;
     grid-column: 1/3;
+    grid-template-columns: 1;
 }
+
+ @media (max-width: 1024px){
+    .bigContent {
+        grid-column: 1/2;
+    }
+} 
 
 .absoluteContent {
     position: absolute;
@@ -346,7 +358,7 @@ h1 {
     right: 0;
 }
 
-.dFlex{
+.dFlex {
     display: flex;
 }
 

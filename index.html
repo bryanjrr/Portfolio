@@ -35,7 +35,7 @@
       </div>
     </div>
     <div>
-      <nav id="listMenu" class="hidden md:flex gap-15 flex-col text-center md:flex-row md:justify-end sm:hidden ">
+      <nav id="listMenu" class="hidden md:flex gap-15 flex-col text-center md:flex-row md:justify-end max-[1024px]:hidden ">
         <a href="" class="text-white text-3xl no-underline font-sans hover-underline"><i class="fa-solid fa-house"></i>
           Inicio</a>
         <a href="" class="text-white text-3xl no-underline font-sans hover-underline"><i class="fa-solid fa-user"></i>
@@ -53,7 +53,7 @@
     <div id="particles-js" class="absolute -z-10 top-0 w-full Seccion1 "></div>
     <dsiv class="relative">
       <div
-        class="max-w-2/3 m-auto rounded-4xl md:flex justify-center gap-10 p-15 hover:shadow-2xs shadow-2xs shadow-white hover:shadow-red-700 bg-black card-presentation">
+        class="max-w-2/3 z-10 m-auto rounded-4xl md:flex justify-center gap-10 p-15 hover:shadow-2xs shadow-2xs shadow-white hover:shadow-red-700 bg-black card-presentation">
         <div class="flex justify-center">
           <img src="./img/foto.jpg" class="rounded-2xl w-130 shadow-cs shadow-gray-50" alt="">
         </div>
@@ -84,25 +84,27 @@
       <h2 class="font-bold"><i class="fa-solid fa-user mr-6"></i>Sobre Mi </h2>
     </div>
 
-      <div class="relative">
-        <img src="./img/portatil.png" class="max-w-[56%] max mx-auto" style="margin-top: -165px;" alt="portatil">
-      </div>
+    <div class="relative w-fit mx-auto">
+      <img src="./img/portatil.png" class="max-[1024px]:w-full max-[1024px]:h-[780px] min-[1025px]:w-[70%]  mx-auto" alt="portatil">
+  
       <div
-        class="absolute right-[34.1%] h-[41.5%] top-[16.6%] bg-gray-950 w-[31.5%] rounded-2xl border flex-col text-center border-white flex ">
-        <div class="border border-white rounded-t-2xl">
-          <div class="text-white text-3xl flex gap-5 p-5 ">
-            <p class="cursor-pointer window-menu" id="option-sobreMi">Sobre Mi</p>
-            <p class="cursor-pointer window-menu" id="option-softSkills">Soft Skills</p>
-            <p class="cursor-pointer window-menu" id="option-hobbies">Hobbies</p>
+          class="absolute left-1/2 top-[16.6%] max-[1024px]:h-[40%] min-[1025]:h-[80%] max-[1024px]:w-[60%] min-[1525px]:w-[30%] min-[1025px]:mt-[6%] max-[1024px]:mt-19 -translate-x-1/2 bg-gray-950  rounded-2xl border flex-col text-center border-white flex">
+          <div class="border border-white rounded-t-2xl">
+              <div class="text-white text-3xl flex gap-5 p-5 justify-center">
+                  <p class="cursor-pointer window-menu" id="option-sobreMi">Sobre Mi</p>
+                  <p class="cursor-pointer window-menu" id="option-softSkills">Soft Skills</p>
+                  <p class="cursor-pointer window-menu" id="option-hobbies">Hobbies</p>
+              </div>
           </div>
-        </div>
-
-        <div id="window-content"
-          class=" cursor-pointer m-[2.5rem] align-middle h-[495px] border rounded-2xl border-white flex justify-center items-center text-[15px]">
-          <p class="text-white animate-pulse "></i>Selecciona una opcion... </p>
-        </div>
+  
+          <div id="window-content"
+              class="cursor-pointer m-[2.5rem] align-middle h-[495px] border rounded-2xl border-white flex justify-center items-center text-[15px]">
+              <p class="text-white animate-pulse">Selecciona una opción...</p>
+          </div>
       </div>
-    
+  </div>
+
+
 
   </section>
   <section class="bg-red-900 p-5" x-data="{estudios: [], experiencia: [], indice: 0, displayStudies: false}"
@@ -111,37 +113,36 @@
       <h2 class="font-bold"><i class="fa-solid fa-books mr-6"></i>Estudios & Experiencia</h2>
     </div>
 
-    <div class="h-320 p-4 md:p-30 grid grid-cols-1 md:grid-cols-[15%_80%] gap-5 justify-center w-full">
-      <div class="w-full md:w-[20%]">
-        <div class="flex h-full flex-col gap-2 self-center">
+    <div class=" md:p-80 grid grid-cols-1 md:grid-cols-[15%_80%] gap-5 justify-center w-full">
+      <div class="w-full">
+        <div class="flex h-full flex-col gap-2 justify-center">
           <button x-on:click="indice=0, displayStudies=true"
-            class="bg-white p-5 rounded-2xl shadow-2xl min-w-2xs h-24 md:h-50 cursor-pointer">
-            <i class="fa-solid fa-graduation-cap text-4xl md:text-6xl"></i>
+            class="bg-black p-5 rounded-2xl shadow-2xl min-w-2xs h-24 md:h-50 cursor-pointer">
+            <i class="fa-solid fa-graduation-cap text-4xl md:text-8xl text-white"></i>
           </button>
           <button x-on:click="displayStudies = false"
-            class="bg-white p-5 rounded-2xl shadow-2xl min-w-2xs h-24 md:h-50 cursor-pointer">
-            <i class="fa-solid fa-suitcase text-4xl md:text-6xl"></i>
+            class="bg-black p-5 rounded-2xl shadow-2xl min-w-2xs h-24 md:h-50 cursor-pointer">
+            <i class="fa-solid fa-suitcase text-4xl md:text-8xl text-white"></i>
           </button>
         </div>
       </div>
 
-      <div class="bg-white shadow-2xs rounded-2xl w-full h-full">
-        <div class="text-black grid grid-cols-1 md:grid-cols-2 gap-4 relative h-full">
+      <div class="bg-black shadow-2xs rounded-2xl w-full h-full">
+        <div class="text-white grid grid-cols-1 md:grid-cols-2 gap-4 relative h-full">
           <div class="z-10 flex p-6 flex-col text-center self-center">
-
-            <div x-show="displayStudies">
-              <p x-text="estudios[indice].title" class="text-3xl md:text-4xl py-6 font-bold"></p>
-              <p x-text="estudios[indice].description" class="text-xl md:text-2xl text-justify"></p>
+            <div x-show="displayStudies ">
+              <p x-text="estudios[indice].title" class="p-4 text-3xl md:text-7xl py-6 font-bold"></p>
+              <p x-text="estudios[indice].description" class="text-xl md:text-4xl text-justify"></p>
             </div>
 
             <div x-show="!displayStudies">
-              <p x-text="experiencia[indice].title" class="text-3xl md:text-4xl py-6 font-bold"></p>
-              <p x-text="experiencia[indice].description" class="text-xl md:text-2xl text-justify"></p>
+              <p x-text="experiencia[indice].title" class="text-3xl md:text-8xl py-6 font-bold"></p>
+              <p x-text="experiencia[indice].description" class="text-xl md:text-4xl text-justify"></p>
             </div>
 
           </div>
 
-          <div class="md:studiesImage relative rounded-2xl">
+          <div class=" studiesImage rounded-2xl">
             <img x-show="displayStudies" x-bind:src="estudios[indice].image" class="w-full h-full object-cover" alt="">
             <img x-show="!displayStudies" x-bind:src="experiencia[indice].image" class="w-full h-full object-cover"
               alt="">
@@ -176,7 +177,7 @@
     </div>
 
     <div>
-      <div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-3 h-auto ">
+      <div class="grid md:grid-cols-2 max-[1024px]::grid-cols-1 p-10 gap-3 h-auto ">
         <div id="allContent" class=" p-10 top-0 h-auto relative">
           <img src="./img/Proyectos/GestionPersonas/personasuf6.png" id="imgProject1"
             class=" shadow rounded-2xl w-full h-[75%]" alt="personas">
