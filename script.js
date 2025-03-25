@@ -120,6 +120,7 @@ function personalizarVentana(contenido, imagenSrc = null) {
   if (imagenSrc) {
     const image = document.createElement("img");
     image.src = imagenSrc;
+    image.style.height = "90%"
     ventana.appendChild(image);
   }
 }
@@ -139,8 +140,8 @@ opciones.forEach(opcion => {
     switch (opcionId) {
       case 'sobreMi':
         personalizarVentana(`
-          <div class="text-start  p-4">
-            <h2 class="text-3xl font-bold mb-2">📌 Sobre mí:</h2>
+          <div class="grid grid-cols-2">
+            <h2 class="text-7xl font-bold justify-between ">📌 Sobre mí:</h2>
             <p><span class="font-bold">Nombre:</span> Bryan Joya</p>
             <p><span class="font-bold">Ubicación:</span> Barcelona</p>
             <p><span class="font-bold">Profesión:</span> Desarrollador de páginas web</p>

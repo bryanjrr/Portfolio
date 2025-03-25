@@ -27,7 +27,7 @@
 
 <body>
 
-  <header class="bg-black grid grid-cols-1 md:grid-cols-2 items-center w-full fixed p-9 top-0 z-20">
+  <header class="bg-black grid grid-cols-1 md:grid-cols-2 items-center w-full fixed p-9 top-0 z-220">
     <div class="grid grid-cols-2 z-10">
       <h2 class="text-white font-[Russo_One] text-5xl cursor-pointer">BryanJr</h2>
       <div id="menuBtn" class="cursor-pointer flex justify-end md:hidden">
@@ -35,7 +35,8 @@
       </div>
     </div>
     <div>
-      <nav id="listMenu" class="hidden md:flex gap-15 flex-col text-center md:flex-row md:justify-end max-[1024px]:hidden ">
+      <nav id="listMenu"
+        class="hidden md:flex gap-15 flex-col text-center md:flex-row md:justify-end max-[1024px]:hidden ">
         <a href="" class="text-white text-3xl no-underline font-sans hover-underline"><i class="fa-solid fa-house"></i>
           Inicio</a>
         <a href="" class="text-white text-3xl no-underline font-sans hover-underline"><i class="fa-solid fa-user"></i>
@@ -84,27 +85,53 @@
       <h2 class="font-bold"><i class="fa-solid fa-user mr-6"></i>Sobre Mi </h2>
     </div>
 
-    <div class="relative w-fit mx-auto">
-      <img src="./img/portatil.png" class="max-[1024px]:w-full max-[1024px]:h-[550px] min-[1025px]:w-[70%]  mx-auto" alt="portatil">
-  
-      <div
-          class="absolute left-1/2 top-[16.6%] max-[1024px]:h-[35%] min-[1025px]:h-[35%]  max-[1024px]:w-[60%] min-[1025px]:w-[40%] min-[1525px]:w-[40%] min-[1025px]:mt-[6%] max-[1024px]:mt-19 -translate-x-1/2 bg-gray-950  rounded-2xl border flex-col text-center border-white flex">
-          <div class="border border-white rounded-t-2xl">
+    <div class="laptop max-[1250px]:w-full md:w-[80%] h-auto py-80 ">
+      <div class="screen max-[1250px]:h-[400px] min-[1250px]:h-[1000px]">
+        <div class="lcd">
+          <div class="bg-gray-950 h-[90%] rounded-2xl border flex-col text-center  border-white flex">
+            <div class="border  border-white rounded-t-2xl">
               <div class="text-white text-3xl flex gap-5 p-5 justify-center">
-                  <p class="cursor-pointer window-menu" id="option-sobreMi">Sobre Mi</p>
-                  <p class="cursor-pointer window-menu" id="option-softSkills">Soft Skills</p>
-                  <p class="cursor-pointer window-menu" id="option-hobbies">Hobbies</p>
+                <p class="cursor-pointer window-menu z-50" id="option-sobreMi">Sobre Mi</p>
+                <p class="cursor-pointer window-menu z-50" id="option-softSkills">Soft Skills</p>
+                <p class="cursor-pointer window-menu z-50" id="option-hobbies">Hobbies</p>
               </div>
-          </div>
-  
-          <div id="window-content"
-              class="cursor-pointer m-[2.5rem] align-middle h-[495px] border rounded-2xl border-white flex justify-center items-center text-[15px]">
+            </div>
+            <!-- 
+            <div id="window-content"
+              class="cursor-pointer z-120 p-30 m-[2.5rem] align-middle h-full border rounded-2xl border-white flex justify-center items-center text-[25px]">
               <p class="text-white animate-pulse">Selecciona una opción...</p>
+            </div> -->
+
+            <div id="window-content2" class="h-full">
+              <div class="grid grid-cols-[70%_30%]  items-center bg-white h-full">
+                <div class="">
+                  <div class="pl-10">
+                    <h2 class="text-3xl text-justify font-bold  md:text-6xl">📌 Sobre mí:</h2>
+                  </div>
+                  <div style="font-size: 14px;" class="text-justify p-10 md:text-5xl">
+                    <p><span class="font-bold z-50">Nombre:</span> Bryan Joya</p>
+                    <p><span class="font-bold z-50">Ubicación:</span> Barcelona</p>
+                    <p><span class="font-bold z-50">Profesión:</span> Desarrollador de páginas web</p>
+                    <p><span class="font-bold z-50">Formación:</span> Ciclo Superior (DAW)</p>
+                    <p><span class="font-bold z-50">Experiencia:</span> Creación y gestión de páginas web</p>
+                  </div>
+                </div>
+
+                <div class=" h-1/2">
+                  <img src="./img/foto.jpg" alt="" srcset="">
+                </div>
+
+              </div>
+            </div>
+
           </div>
+        </div>
+        <div class="glass_frame"></div>
+        <div class="screen_reflection"></div>
       </div>
-  </div>
-
-
+      <div class="keyboard top"></div>
+      <div class="keyboard bottom"></div>
+    </div>
 
   </section>
   <section class="bg-red-900 p-5" x-data="{estudios: [], experiencia: [], indice: 0, displayStudies: false}"
